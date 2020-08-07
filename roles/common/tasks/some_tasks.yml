@@ -1,0 +1,4 @@
+- name: Echo "{{ var }}"
+  command: echo "{{ var }}"
+  register: existence
+  ignore_errors: yes

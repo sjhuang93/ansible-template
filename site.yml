@@ -1,0 +1,23 @@
+# master playbook
+---
+- hosts: hostname
+  gather_facts: false
+  become: yes
+
+  tasks:
+    - name: taskA
+      func:
+        func_parameter:
+        ....
+    
+    - name: taskB
+      func:
+        func_parameter:
+        ....
+      
+    - name: taskC
+      import_role:
+        name: common
+        tasks_from: some_tasks
+      vars:
+        varname: "var"

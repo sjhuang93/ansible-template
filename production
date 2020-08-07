@@ -1,0 +1,11 @@
+## inventory file for production servers
+## Common parameters
+##     - ansible_host : The name of the host to connect to, if different from the alias you wish to give to it.
+##     - ansible_port : The connection port number, if not the default (22 for ssh)
+##     - ansible_user : The user name to use when connecting to the host
+##     - ansible_ssh_private_key_file : Private key file used by ssh. Useful if using multiple keys and you don’t want to use SSH agent.
+## Example: 
+hostname1    ansible_host=1.1.1.1    ansible_port=2222    ansible_user=manager
+[groupname]
+hostname2    ansible_host=1.1.1.2    ansible_port=2222    ansible_user=manager
+hostname3    ansible_host=1.1.1.3    ansible_port=2222    ansible_user=manager
